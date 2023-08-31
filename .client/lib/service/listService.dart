@@ -9,6 +9,8 @@ class ListService {
     var response = await client.get(Uri.parse(base_url));
     if (response.statusCode == 200) {
       return listModelFromJson(response.body);
+    } else {
+      print("Something happend in the Service File");
     }
   }
 }
